@@ -61,12 +61,11 @@
     </div>
   </div>
 
-  <!-- optional audio (user must click to play in many browsers) -->
-<audio id="bg-music" autoplay loop>
-  <source src="WILL.m4a" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
+  <!-- audio -->
+  <audio id="bdayAudio" autoplay loop>
+    <source src="WILL.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
   <script>
     // ---------- floating emoji ----------
@@ -119,7 +118,6 @@
       const front = showingA ? b : a;   // will bring to front
       const back  = showingA ? a : b;   // will go to back
 
-      // set new src and wait for it to load to avoid blank flash
       front.onload = () => {
         front.classList.add('show');
         back.classList.remove('show');
@@ -131,7 +129,7 @@
       index = nextIndex;
     }
 
-    // start auto-change every 3s (first change after 3s)
+    // start auto-change every 3s
     setInterval(showNext, 3000);
 
     // ---------- buttons ----------
@@ -161,4 +159,3 @@
   </script>
 </body>
 </html>
-
